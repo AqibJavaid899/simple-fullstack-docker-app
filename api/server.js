@@ -5,8 +5,10 @@ import data from "./data.js";
 
 const app = express();
 
+// Handling the Permission regarding Resource Sharing
 app.use(cors());
 
+// GET Route which will return the JSON object
 app.use("/", (req, res) => {
   res.status(200).json(data);
 });

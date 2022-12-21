@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  api:
+    build: ./api
+    container_name: api_c
+    ports:
+      - "4002:4001"
+    volumes:
+      - /Users/aqibjavaid/Documents/Docker/app/api:/app
+      - /Users/aqibjavaid/Documents/Docker/app/api/node_modules

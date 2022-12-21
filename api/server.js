@@ -18,7 +18,7 @@ app.get("/get", (req, res) => {
 
 app.post("/post", (req, res) => {
   const user = req.body;
-  users = [...users, user];
+  users = [...users, { id: users.length + 1, ...user }];
   fs.writeFileSync("data.json", JSON.stringify(users));
   res.status(201).json(users);
 });
